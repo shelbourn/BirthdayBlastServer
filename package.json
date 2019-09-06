@@ -11,10 +11,10 @@
     "test": "mocha -w"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "author": "Nick Anderson & Matthew Shelbourn",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/shelbourn/BirthdayBlastServer.git"
   },
   "license": "MIT",
   "dependencies": {
