@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use('/api/v1', api);
+app.use('/api/v1', api); // Establises 'v1' as route
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
