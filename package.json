@@ -1,35 +1,43 @@
 {
-  "name": "express-api-starter",
-  "version": "1.2.0",
-  "description": " A basic starter for an express.js API",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "lint": "eslint --fix src",
-    "audit": "snyk test",
-    "test": "mocha -w"
-  },
-  "keywords": [],
-  "author": "Nick Anderson & Matthew Shelbourn",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shelbourn/BirthdayBlastServer.git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "helmet": "^3.15.0",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.9",
-    "snyk": "^1.185.5",
-    "supertest": "^3.3.0"
-  }
+	"name": "express-api-starter",
+	"version": "1.2.0",
+	"description": " A basic starter for an express.js API",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "nodemon src/index.js",
+		"lint": "eslint --fix src",
+		"audit": "snyk test",
+		"test": "mocha -w"
+	},
+	"keywords": [],
+	"author": "Nick Anderson & Matthew Shelbourn",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shelbourn/BirthdayBlastServer.git"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"dotenv": "^6.2.0",
+		"express": "^4.16.4",
+		"helmet": "^3.15.0",
+		"morgan": "^1.9.1"
+	},
+	"devDependencies": {
+		"eslint": "6.1.0",
+		"eslint-config-airbnb": "18.0.1",
+		"eslint-config-node": "^4.0.0",
+		"eslint-config-prettier": "^6.2.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^1.7.0",
+		"mocha": "^5.2.0",
+		"nodemon": "^1.18.9",
+		"prettier": "^1.18.2",
+		"snyk": "^1.185.5",
+		"supertest": "^3.3.0"
+	}
 }

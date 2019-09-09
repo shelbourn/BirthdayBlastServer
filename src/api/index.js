@@ -1,17 +1,17 @@
-const express = require('express');
+const express = require('express')
 
-const emojis = require('./emojis');
-const newRoute = require('./newRoute');
+const emojis = require('./emojis')
+const newRoute = require('./newRoute')
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.json({
-    message: 'API - 👋🌎🌍🌏'
-  });
-});
+	res.json({
+		message: 'API - 👋🌎🌍🌏'
+	})
+})
 
-router.use('/emojis', emojis);
-router.use('/newRoute', newRoute); // Establishes 'newRoute' as new route.
+router.use('/emojis', emojis)
+router.use('/newRoute', newRoute) // Establishes 'newRoute' as new route.
 
-module.exports = router;
+module.exports = router
