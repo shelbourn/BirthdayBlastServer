@@ -11,7 +11,7 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(helmet())
-console.log(process.env.NODE_ENV)
+console.log(process.env.test.NODE_ENV)
 app.get('/', (req, res) => {
 	res.json({
 		message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄'
