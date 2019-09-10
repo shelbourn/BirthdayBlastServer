@@ -15,5 +15,3 @@ router.use('/emojis', emojis)
 router.use('/newRoute', newRoute) // Establishes 'newRoute' as new route.
 
 module.exports = router
-
-test
