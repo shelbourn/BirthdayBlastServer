@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
 	})
 })
 
+app.post('/', (req, res) => {
+	console.log(req)
+})
+
 app.use('/api/v1', api) // Establises 'v1' as route
 
 app.use(middlewares.notFound)
