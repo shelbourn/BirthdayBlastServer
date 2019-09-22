@@ -1,9 +1,9 @@
 const express = require('express')
 
-const math = require('./math')
+const randomString = require('./randomString')
 
 const router = express.Router()
 
-router.use('/math', math)
+router.use('/randomString', randomString)
 
 module.exports = router
