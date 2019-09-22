@@ -1,9 +1,9 @@
 const express = require('express')
 
-const math = require('./math')
-
 const router = express.Router()
 
-router.use('/math', math)
+router.get('/', (req, res) => {
+	res.json([Math.random()])
+})
 
 module.exports = router
