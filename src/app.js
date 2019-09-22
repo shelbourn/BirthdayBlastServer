@@ -7,7 +7,7 @@ require('dotenv').config()
 const middlewares = require('./middlewares')
 const api = require('./api')
 const api2 = require('./api/api2')
-const test1 = require('./test1')
+const test1 = require('./api/test1')
 
 const app = express()
 
