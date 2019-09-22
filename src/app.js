@@ -7,6 +7,7 @@ require('dotenv').config()
 const middlewares = require('./middlewares')
 const api = require('./api')
 const api2 = require('./api/api2')
+const test1 = require('./test1')
 
 const app = express()
 
@@ -35,6 +36,7 @@ app.post('/post', (req, res) => {
 
 app.use('/api/v1', api) // Establises 'v1' as route
 app.use('/api2', api2)
+app.use('/test1', test1)
 
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
