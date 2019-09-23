@@ -6,9 +6,6 @@ require('dotenv').config()
 
 const middlewares = require('./middlewares')
 const api = require('./api')
-const api2 = require('./api/api2')
-const admin = require('./api/admin')
-const list = require('./api/list')
 
 const app = express()
 
@@ -24,35 +21,7 @@ app.get('/', (req, res) => {
 	})
 })
 
-app.post('/post', (req, res) => {
-	console.log(req.body)
-	// const value = req.body.data
-	// if (typeof value === 'number') {
-	// 	res.json({ message: value + 1000 })
-	// } else {
-	// 	res.json({ anotherMessage: 'send a number FOo! 🦄' })
-	// }
-	res.json(req.body)
-})
-
-// Establishes List Post route
-
-// app.post('/listPost', (req, res) => {
-// 	console.log(req.body)
-// 	res.json(req.body)
-// })
-
-// Establishes Admin Post Route
-
-// app.post('/adminPost', (req, res) => {
-// 	console.log(req.body)
-// 	res.json(req.body)
-// })
-
 app.use('/api/v1', api) // Establises 'v1' as route
-app.use('/api2', api2)
-app.use('/admin', admin)
-app.use('/list', list)
 
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)

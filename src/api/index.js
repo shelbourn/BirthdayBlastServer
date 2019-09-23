@@ -1,7 +1,7 @@
 const express = require('express')
 
-const emojis = require('./emojis')
-const newRoute = require('./newRoute')
+const admin = require('./admin')
+const list = require('./list')
 
 const router = express.Router()
 
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 	})
 })
 
-router.use('/emojis', emojis)
-router.use('/newRoute', newRoute) // Establishes 'newRoute' as new route.
+router.use('/admin', admin)
+router.use('/list', list)
 
 module.exports = router
