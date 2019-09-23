@@ -42,6 +42,13 @@ app.post('/listPost', (req, res) => {
 	res.json(req.body)
 })
 
+// Establishes Admin Post Route
+
+app.post('/adminPost', (req, res) => {
+	console.log(req.body)
+	res.json(req.body)
+})
+
 app.use('/api/v1', api) // Establises 'v1' as route
 app.use('/api2', api2)
 app.use('/admin', admin)
