@@ -8,6 +8,7 @@ const middlewares = require('./middlewares')
 const api = require('./api')
 const api2 = require('./api/api2')
 const admin = require('./api/admin')
+const list = require('./api/list')
 
 const app = express()
 
@@ -37,6 +38,7 @@ app.post('/post', (req, res) => {
 app.use('/api/v1', api) // Establises 'v1' as route
 app.use('/api2', api2)
 app.use('/admin', admin)
+app.use('/list', list)
 
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
