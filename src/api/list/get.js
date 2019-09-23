@@ -1,9 +1,7 @@
-const express = require('express')
-
-const router = express.Router()
+const { router, listData } = require('../../data')
 
 router.get('/', (req, res) => {
-	res.json(['😀', '😳', '🙄'])
+	res.json(listData)
 })
 
 module.exports = router
