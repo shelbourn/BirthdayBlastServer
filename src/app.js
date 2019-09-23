@@ -35,6 +35,13 @@ app.post('/post', (req, res) => {
 	res.json(req.body)
 })
 
+// Establishes List Post route
+
+app.post('/listPost', (req, res) => {
+	console.log(req.body)
+	res.json(req.body)
+})
+
 app.use('/api/v1', api) // Establises 'v1' as route
 app.use('/api2', api2)
 app.use('/admin', admin)
