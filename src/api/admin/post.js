@@ -1,12 +1,7 @@
-const express = require('express')
-
-const router = express.Router()
-
-// Establishes Admin Post Route
+const { router, adminData } = require('../../data')
 
 router.post('/', (req, res) => {
-	console.log(req.body)
-	res.json(req.body)
+	res.json(adminData)
 })
 
 module.exports = router
