@@ -1,12 +1,7 @@
-const express = require('express')
-
-const router = express.Router()
-
-// Establishes List Post Route
+const { router, listData } = require('../../data')
 
 router.post('/', (req, res) => {
-	console.log(req.body)
-	res.json(req.body)
+	res.json(listData)
 })
 
 module.exports = router
