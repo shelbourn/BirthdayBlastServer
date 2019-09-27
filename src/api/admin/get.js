@@ -5,7 +5,9 @@ const router = express.Router()
 const { adminData } = require('../../data')
 
 router.get('/', (req, res) => {
-	res.json(adminData)
+	const lastInIndex = adminData.pop()
+	console.log(lastInIndex)
+	res.json(lastInIndex)
 })
 
 module.exports = router

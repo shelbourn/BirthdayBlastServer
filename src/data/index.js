@@ -1,6 +1,9 @@
+// NoSQL-style Database
+
 const data = {
 	adminData: ['🦄', '🌈', '👋'],
-	listData: ['😀', '😳', '🙄']
+	listData: ['😀', '😳', '🙄'],
+	listDataStore: []
 }
 
 // Spread operator seperates data into its separate object
