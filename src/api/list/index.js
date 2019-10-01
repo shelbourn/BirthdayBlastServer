@@ -1,7 +1,7 @@
 const express = require('express')
 
-const listGet = require('./get')
-const listPost = require('./post')
+const listGet = require('./listGet')
+const listPost = require('./listPost')
 // const listDelete = require('./delete')
 // const listPut = require('./put')
 // const listPatch = require('./patch')
