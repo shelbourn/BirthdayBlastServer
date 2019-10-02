@@ -22,7 +22,7 @@ const validateParams = body => {
 		}
 		return false
 	}
-	return false
+	return true
 }
 
 module.exports = {

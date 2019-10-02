@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
 	if (validationObjectSize(req.body) && validateParams(req.body)) {
 		console.log('success: ', req.body)
 		listDataStore.push(req.body)
-		return res.json('POST SUCCESSFUL!!! And matt is a bitch!')
+		return res.json(listDataStore)
 	}
 	const error = res.status(400).send('Oops, try again!') // is this correct?
 	console.log(error)

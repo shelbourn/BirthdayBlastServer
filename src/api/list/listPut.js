@@ -17,8 +17,15 @@ const { listDataStore } = require('../../data')
 // req.body.email
 
 router.put('/', (req, res) => {
+	listDataStore.forEach((data, i) => {
+		if (data.email === req.body.email) {
+			// listDataStore[i] = req.body ->> put data
+			// listDataStore.splice(i) ->> delete data
+		}
+		return data
+	})
 	console.log(listDataStore)
-	res.json('Update Successful!!!')
+	res.json(listDataStore)
 })
 
 module.exports = router
