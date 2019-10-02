@@ -3,7 +3,8 @@
 const data = {
 	adminData: ['🦄', '🌈', '👋'],
 	listData: ['😀', '😳', '🙄'],
-	listDataStore: []
+	listDataStore: [],
+	adminDataStore: []
 }
 
 // Spread operator seperates data into its separate object
