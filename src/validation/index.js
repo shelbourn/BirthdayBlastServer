@@ -14,8 +14,7 @@ const validateParams = body => {
 		typeof body.email !== 'string' &&
 		typeof body.phone !== 'string' &&
 		typeof body.bday !== 'string' &&
-		typeof body.notificationTime !== 'string' &&
-		regex.test(body.phone)
+		typeof body.notificationTime !== 'string'
 	) {
 		if (regex.test(body.phone)) {
 			// test using RegEx tester
