@@ -16,11 +16,12 @@ const validateParams = body => {
 		typeof body.bday !== 'string' &&
 		typeof body.notificationTime !== 'string'
 	) {
-		if (regex.test(body.phone)) {
-			// test using RegEx tester
-			return true
-		}
-		return false
+		return body
+		// if (regex.test(body.phone)) {
+		// 	// test using RegEx tester
+		// 	return true
+		// }
+		// return false
 	}
 	return true
 }
