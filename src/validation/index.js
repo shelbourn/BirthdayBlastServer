@@ -20,9 +20,9 @@ const validateParams = body => {
 			// test using RegEx tester
 			// return true
 		}
-		// return false
+		return true
 	}
-	return body
+	return true
 }
 
 module.exports = {
