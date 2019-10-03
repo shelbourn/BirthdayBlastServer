@@ -2,10 +2,12 @@ const express = require('express')
 
 const router = express.Router()
 
-const { adminData } = require('../../data')
+const { adminDataStore } = require('../../data')
 
 router.post('/', (req, res) => {
-	res.json(adminData)
+	adminDataStore.push(req.body)
+	console.log(adminDataStore)
+	return res.json('POST SUCCESSFUL in Admin Data Store!')
 })
 
 module.exports = router

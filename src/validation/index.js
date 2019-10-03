@@ -12,7 +12,9 @@ const validateParams = body => {
 	if (
 		typeof body.name !== 'string' &&
 		typeof body.email !== 'string' &&
-		typeof body.phone !== 'string'
+		typeof body.phone !== 'string' &&
+		typeof body.bday !== 'string' &&
+		typeof body.notificationTime !== 'string'
 	) {
 		if (regex.test(body.phone)) {
 			// test using RegEx tester
@@ -20,7 +22,7 @@ const validateParams = body => {
 		}
 		return false
 	}
-	return false
+	return true
 }
 
 module.exports = {
