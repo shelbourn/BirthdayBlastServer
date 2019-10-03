@@ -8,7 +8,7 @@ const validationObjectSize = body => {
 }
 
 const validateParams = body => {
-	const regex = '/^(()?d{3}())?(-|s)?d{3}(-|s)d{4}$/' // confirm that this regex requires 10-digit phone number
+	const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 	if (
 		typeof body.name !== 'string' &&
 		typeof body.email !== 'string' &&
@@ -17,7 +17,6 @@ const validateParams = body => {
 		typeof body.notificationTime !== 'string'
 	) {
 		if (regex.test(body.phone)) {
-			// test using RegEx tester
 			return true
 		}
 		return false
