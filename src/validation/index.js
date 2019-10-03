@@ -18,11 +18,11 @@ const validateParams = body => {
 	) {
 		if (regex.test(body.phone)) {
 			// test using RegEx tester
-			// return true
+			return true
 		}
-		// return true
+		return false
 	}
-	return false
+	return body
 }
 
 module.exports = {
