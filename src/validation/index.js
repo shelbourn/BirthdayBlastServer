@@ -14,15 +14,17 @@ const validateParams = body => {
 		typeof body.email !== 'string' &&
 		typeof body.phone !== 'string' &&
 		typeof body.bday !== 'string' &&
-		typeof body.notificationTime !== 'string'
+		typeof body.notificationTime !== 'string' &&
+		regex.test(body.phone)
 	) {
-		if (regex.test(body.phone)) {
-			// test using RegEx tester
-			// return true
-		}
 		return true
+		// if (regex.test(body.phone)) {
+		// 	// test using RegEx tester
+		// 	return true
+		// }
+		// return false
 	}
-	return true
+	return false
 }
 
 module.exports = {
