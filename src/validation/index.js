@@ -8,7 +8,7 @@ const validationObjectSize = body => {
 }
 
 const validateParams = body => {
-	const regex = '/^(?([0-9]{3}))?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/'
+	const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 	if (
 		typeof body.name !== 'string' &&
 		typeof body.email !== 'string' &&
@@ -17,11 +17,11 @@ const validateParams = body => {
 		typeof body.notificationTime !== 'string'
 	) {
 		if (regex.test(body.phone)) {
-			return true
+			return body.phone
 		}
-		return false
+		return body
 	}
-	return true
+	return false
 }
 
 module.exports = {
