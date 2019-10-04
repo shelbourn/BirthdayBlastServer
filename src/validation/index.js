@@ -9,12 +9,13 @@ const validationObjectSize = body => {
 
 const regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
 
-const validatePhone = body => {
-	if (regex.test(body.phone)) {
-		return true
-	}
-	return false
-}
+// const validatePhone = body => {
+// 	regex.test(body.phone)
+// 	// if (regex.value.match(body.phone)) {
+// 	// 	return true
+// 	// }
+// 	// return false
+// }
 
 const validateParams = body => {
 	// const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
@@ -24,7 +25,7 @@ const validateParams = body => {
 		typeof body.phone !== 'string' ||
 		typeof body.bday !== 'string' ||
 		typeof body.notificationTime !== 'string' ||
-		validatePhone !== true
+		regex.test(body.phone) !== true
 	) {
 		return false
 		// if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(body.phone)) {
