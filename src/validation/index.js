@@ -7,6 +7,13 @@ const validationObjectSize = body => {
 	return 0 // false, 0, '0', null, undefined
 }
 
+const validatePhone = body => {
+	if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(body.phone)) {
+		return true
+	}
+	return false
+}
+
 const validateParams = body => {
 	// const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 	if (
@@ -14,12 +21,14 @@ const validateParams = body => {
 		typeof body.email !== 'string' &&
 		typeof body.phone !== 'string' &&
 		typeof body.bday !== 'string' &&
-		typeof body.notificationTime !== 'string'
+		typeof body.notificationTime !== 'string' &&
+		validatePhone === true
 	) {
-		if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(body.phone)) {
-			return body.phone
-		}
-		return false
+		return body
+		// if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(body.phone)) {
+		// 	return body.phone
+		// }
+		// return false
 	}
 	return false
 }
