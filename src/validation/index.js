@@ -7,8 +7,10 @@ const validationObjectSize = body => {
 	return 0 // false, 0, '0', null, undefined
 }
 
+const regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+
 const validatePhone = body => {
-	if (/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(body.phone)) {
+	if (regex.test(body.phone)) {
 		return true
 	}
 	return false

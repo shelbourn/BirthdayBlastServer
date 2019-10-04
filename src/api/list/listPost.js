@@ -2,7 +2,10 @@ const express = require('express')
 
 const router = express.Router()
 
-const { validationObjectSize, validateParams } = require('../../validation')
+const {
+	validationObjectSize,
+	validateParams
+} = require('../../validation').default
 const { listDataStore } = require('../../data')
 
 /*
