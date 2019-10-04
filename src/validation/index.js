@@ -20,12 +20,12 @@ const regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
 const validateParams = body => {
 	// const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 	if (
-		typeof body.name !== 'string' ||
+		typeof body.name !== 'string' || // needed OR operator instead of AND (|| not &&)
 		typeof body.email !== 'string' ||
 		typeof body.phone !== 'string' ||
 		typeof body.bday !== 'string' ||
 		typeof body.notificationTime !== 'string' ||
-		regex.test(body.phone) !== true
+		regex.test(body.phone) !== true // needed to test regex on phone within function
 	) {
 		return false
 		// if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(body.phone)) {
