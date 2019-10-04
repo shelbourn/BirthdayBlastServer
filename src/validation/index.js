@@ -11,10 +11,10 @@ const regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
 
 // const validatePhone = body => {
 // 	regex.test(body.phone)
-// 	// if (regex.value.match(body.phone)) {
-// 	// 	return true
-// 	// }
-// 	// return false
+//  if (regex.value.match(body.phone)) {
+// 	 return true
+//  }
+//  return false
 // }
 
 const validateParams = body => {
