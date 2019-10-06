@@ -1,6 +1,6 @@
 // Validation of array size
 
-const validationObjectSize = body => {
+const validateObjectSize = body => {
 	const keys = Object.keys(body)
 	console.log(keys, keys.length)
 	if (keys.length === 5) {
@@ -45,6 +45,6 @@ const validateParams = body => {
 // Exports validation consts for use in other files
 
 module.exports = {
-	validationObjectSize,
+	validateObjectSize,
 	validateParams
 }
