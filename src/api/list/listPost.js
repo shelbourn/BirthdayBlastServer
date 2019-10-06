@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = express.Router()
 
-const { validationObjectSize, validateParams } = require('../../validation')
+const { validateObjectSize, validateParams } = require('../../validation')
 const { listDataStore } = require('../../data')
 
 /*
@@ -16,7 +16,7 @@ const body = {
 */
 
 router.post('/', (req, res) => {
-	if (validationObjectSize(req.body) && validateParams(req.body)) {
+	if (validateObjectSize(req.body) && validateParams(req.body)) {
 		console.log('success: ', req.body)
 		listDataStore.push(req.body)
 		return res.json(listDataStore)
