@@ -31,17 +31,11 @@ const { validateObjectSize, validateParams } = require('../../validation')
 
 router.put('/', (req, res) => {
 	listDataStore.forEach((data, i) => {
-		if (
-			data.email === req.body.email &&
-			validateObjectSize(req.body) &&
-			validateParams(req.body)
-		) {
+		if (data.email === req.body.email) {
 			listDataStore[i] = req.body // Pushed data to record based on email as PK
 			// listDataStore.splice(i) ->> delete data
 		}
-		const error = res.status(400).send('Oops, try again!') // is this correct?
-		console.log(error)
-		return error
+		return data
 	})
 	console.log(listDataStore)
 	res.json(listDataStore)
