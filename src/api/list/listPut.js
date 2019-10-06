@@ -39,6 +39,15 @@ router.put('/', (req, res) => {
 			listDataStore[i] = req.body // Pushed data to record based on email as PK
 			// listDataStore.splice(i) ->> delete data
 		}
+		if (
+			(data.email === req.body.email &&
+				validateObjectSize(req.body) !== true) ||
+			validateParams(req.body) !== true
+		) {
+			const error = res.status(400).send('Oops, try again!') // is this correct?
+			console.log(error)
+			return error
+		}
 		return data
 		// const error = res.status(400).send('Oops, try again!') // is this correct?
 		// console.log(error)
