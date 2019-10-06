@@ -4,7 +4,7 @@ const router = express.Router()
 
 const { listDataStore } = require('../../data')
 
-const { validateObjectSize, validateParams } = require('../../validation')
+const { validationObjectSize, validateParams } = require('../../validation')
 
 /*
 {
@@ -33,7 +33,7 @@ router.put('/', (req, res) => {
 	listDataStore.forEach((data, i) => {
 		if (
 			data.email === req.body.email &&
-			validateObjectSize(req.body) &&
+			validationObjectSize(req.body) &&
 			validateParams(req.body)
 		) {
 			listDataStore[i] = req.body // Pushed data to record based on email as PK
