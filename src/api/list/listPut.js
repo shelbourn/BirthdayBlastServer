@@ -19,7 +19,7 @@ const { listDataStore } = require('../../data')
 router.put('/', (req, res) => {
 	listDataStore.forEach((data, i) => {
 		if (data.email === req.body.email) {
-			// listDataStore[i] = req.body ->> put data
+			listDataStore[i] = req.body // Pushed data to record based on email as PK
 			// listDataStore.splice(i) ->> delete data
 		}
 		return data
