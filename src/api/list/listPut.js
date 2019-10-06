@@ -27,6 +27,8 @@ const { validateObjectSize, validateParams } = require('../../validation')
 // 	return error
 // })
 
+// Put only if email matches PK of record in database and if validation passes
+
 router.put('/', (req, res) => {
 	listDataStore.forEach((data, i) => {
 		if (
