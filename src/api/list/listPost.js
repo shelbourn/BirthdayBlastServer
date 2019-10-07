@@ -5,16 +5,6 @@ const router = express.Router()
 const { validateObjectSize, validateParams } = require('../../validation')
 const { listDataStore } = require('../../data')
 
-/*
-const body = {
-	"name":"Erica",
-	"email": "a@aol.com",
-	"phone": "562",
-	"bday": "8-18",
-	"notificationTime": "8am"
-}
-*/
-
 router.post('/', (req, res) => {
 	if (validateObjectSize(req.body) && validateParams(req.body)) {
 		console.log('success: ', req.body)
