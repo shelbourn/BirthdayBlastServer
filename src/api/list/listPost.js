@@ -5,19 +5,10 @@ const router = express.Router()
 const { validateObjectSize, validateParams } = require('../../validation')
 const { listDataStore } = require('../../data')
 
-/*
-const body = {
-	"name":"Erica",
-	"email": "a@aol.com",
-	"phone": "562",
-	"bday": "8-18",
-	"notificationTime": "8am"
-}
-*/
-
+// Posts record to DB if validation passes
 router.post('/', (req, res) => {
 	if (validateObjectSize(req.body) && validateParams(req.body)) {
-		console.log('success: ', req.body)
+		console.log('Success! Your record has been added :): ', req.body)
 		listDataStore.push(req.body)
 		return res.json(listDataStore)
 	}
