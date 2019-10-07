@@ -16,7 +16,7 @@ const { validateObjectSize, validateParams } = require('../../validation')
 }
 */
 
-// Put only if email matches PK of record in database and if validation passes
+// Updated record in DB only if email exists and validation passes
 router.put('/', (req, res) => {
 	listDataStore.forEach((data, i) => {
 		if (
@@ -24,8 +24,8 @@ router.put('/', (req, res) => {
 			validateObjectSize(req.body) &&
 			validateParams(req.body)
 		) {
+			console.log('Success! Your record has been updated! :)')
 			listDataStore[i] = req.body // Push data to record based on email as PK
-			// listDataStore.splice(i) ->> delete data
 		} else if (
 			data.email === req.body.email &&
 			(validateObjectSize(req.body) === false ||
